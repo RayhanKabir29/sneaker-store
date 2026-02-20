@@ -1,9 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Badge } from "antd";
+import { Badge, Button } from "antd";
 import { SearchOutlined, UserOutlined, DownOutlined } from "@ant-design/icons";
 import Container from "@/components/layout/Container";
+import { useCart } from "@/context/CartContext";
 
 const Menu = () => {
   const menuItems = [
@@ -11,7 +12,7 @@ const Menu = () => {
     { label: "Men", dropdown: true },
     { label: "Women", dropdown: true },
   ];
-
+const {  getTotalItems } = useCart();
   return (
     <Container>
         <div className="w-full bg-[#e9e7e4] py-4">
@@ -47,10 +48,10 @@ const Menu = () => {
           </motion.div>
 
           <motion.div whileHover={{ scale: 1.1 }} className="cursor-pointer">
-            <Badge count={0} size="small">
-              <div className="w-6 h-6 rounded-full bg-orange-400 flex items-center justify-center text-xs font-bold text-white">
-                0
-              </div>
+            <Badge count={getTotalItems()} size="small" showZero>
+              <Button className="w-6 h-6 rounded-full bg-orange-400 flex items-center justify-center text-xs font-bold text-white">
+                {getTotalItems()}
+              </Button>
             </Badge>
           </motion.div>
         </div>

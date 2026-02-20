@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Categories } from "@/components/home/Categories";
 import { Review } from "@/components/home/Review";
 import HeroSection from "@/components/home/Hero";
+import Product from "@/components/home/Product";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         className="min-h-screen w-full bg-gray-maybe"
       >
         <HeroSection />
+        <Product/>
         <Categories/>
         <Review />
       </motion.main>
