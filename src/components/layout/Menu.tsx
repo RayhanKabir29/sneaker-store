@@ -48,7 +48,7 @@ const {  getTotalItems } = useCart();
           </motion.div>
 
           <motion.div whileHover={{ scale: 1.1 }} className="cursor-pointer">
-            <Badge count={getTotalItems()} size="small" showZero>
+            <Badge  size="small" showZero>
               <Button className="w-6 h-6 rounded-full bg-orange-400 flex items-center justify-center text-xs font-bold text-white">
                 {getTotalItems()}
               </Button>
