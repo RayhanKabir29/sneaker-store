@@ -1,5 +1,5 @@
 import Footer from "@/components/layout/Footer";
-import Header from "@/components/layout/Header";
+import Menu from "@/components/layout/Menu";
 import { FC } from "react";
 
 interface Iprops {
@@ -9,7 +9,7 @@ interface Iprops {
 const LayoutWrapper: FC<Iprops> = async ({ children }) => {
   return (
     <div className="flex flex-col min-h-screen">
-      <Header  />
+      <Menu  />
       <main className="flex-1">{children}</main>
       <Footer />
     </div>

@@ -1,5 +1,5 @@
 "use client";
-import Container from "@/components/layout/Container";
+
 import { motion } from "framer-motion";
 import { Button, Badge as AntBadge, Card, Row, Col } from "antd";
 import { ShoppingCartOutlined, HeartOutlined } from "@ant-design/icons";
@@ -22,14 +22,13 @@ const item = {
   hidden: { y: 20, opacity: 0 },
   show: { y: 0, opacity: 1 },
 };
-const Header = () => {
+const HeroSection = () => {
   const { data: products, isLoading } = useGetProductsQuery({
     limit: 4,
     offset: 0,
   });
   const { addToCart, getTotalItems } = useCart();
   return (
-    <Container>
       <motion.section
         variants={container}
         initial="hidden"
@@ -98,7 +97,7 @@ const Header = () => {
           {isLoading
             ? Array.from({ length: 4 }).map((_, idx) => (
                 <Col key={idx} xs={6}>
-                  <Card loading />
+                    <h2 className="h-[348px] bg-gray-200 rounded-lg animate-pulse">Loading Product........</h2>
                 </Col>
               ))
             : products?.slice(0, 4).map((product) => (
@@ -151,8 +150,7 @@ const Header = () => {
               ))}
         </Row>
       </motion.section>
-    </Container>
   );
 };
 
-export default Header;
+export default HeroSection;

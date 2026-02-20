@@ -69,7 +69,7 @@ export const Categories = () => {
         </div>
 
         {isLoading ? (
-          <Card loading className="h-[348px]" />
+          <h2 className="h-[348px] bg-gray-200 rounded-lg animate-pulse">Loading Categories........</h2>
         ) : (
           <Carousel ref={carouselRef} dots={false} slidesToShow={2}>
             {categories?.slice(0, 5).map((category) => (

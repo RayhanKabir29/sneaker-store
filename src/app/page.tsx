@@ -5,6 +5,7 @@ import "./global.css";
 import { motion } from "framer-motion";
 import { Categories } from "@/components/home/Categories";
 import { Review } from "@/components/home/Review";
+import HeroSection from "@/components/home/Hero";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         transition={{ duration: 0.5 }}
         className="min-h-screen w-full bg-gray-maybe"
       >
+        <HeroSection />
         <Categories/>
         <Review />
       </motion.main>
