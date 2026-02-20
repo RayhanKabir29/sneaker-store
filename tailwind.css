@@ -1,0 +1,273 @@
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
+}
+
+:root {
+  --blue-maybe: rgba(74, 105, 226, 1);
+  --copy-body-1-font-family: "Inter", Helvetica;
+  --copy-body-1-font-size: 16px;
+  --copy-body-1-font-style: normal;
+  --copy-body-1-font-weight: 400;
+  --copy-body-1-letter-spacing: 0.5px;
+  --copy-body-1-line-height: normal;
+  --copy-button-font-family: "Inter", Helvetica;
+  --copy-button-font-size: 14px;
+  --copy-button-font-style: normal;
+  --copy-button-font-weight: 500;
+  --copy-button-letter-spacing: 0.25px;
+  --copy-button-line-height: normal;
+  --darkgrey-2: rgba(188, 188, 188, 1);
+  --gray-maybe: rgba(231, 231, 227, 1);
+  --open-sans-regular-14px-font-family: "Open Sans", Helvetica;
+  --open-sans-regular-14px-font-size: 14px;
+  --open-sans-regular-14px-font-style: normal;
+  --open-sans-regular-14px-font-weight: 400;
+  --open-sans-regular-14px-letter-spacing: 0px;
+  --open-sans-regular-14px-line-height: normal;
+  --open-sans-semibold-14px-font-family: "Open Sans", Helvetica;
+  --open-sans-semibold-14px-font-size: 14px;
+  --open-sans-semibold-14px-font-style: normal;
+  --open-sans-semibold-14px-font-weight: 600;
+  --open-sans-semibold-14px-letter-spacing: 0px;
+  --open-sans-semibold-14px-line-height: normal;
+  --open-sans-semibold-16px-font-family: "Open Sans", Helvetica;
+  --open-sans-semibold-16px-font-size: 16px;
+  --open-sans-semibold-16px-font-style: normal;
+  --open-sans-semibold-16px-font-weight: 600;
+  --open-sans-semibold-16px-letter-spacing: 0px;
+  --open-sans-semibold-16px-line-height: normal;
+  --purewhite: rgba(255, 255, 255, 1);
+  --regular-12-font-family: "Poppins", Helvetica;
+  --regular-12-font-size: 12px;
+  --regular-12-font-style: normal;
+  --regular-12-font-weight: 400;
+  --regular-12-letter-spacing: 0px;
+  --regular-12-line-height: normal;
+  --rubik-12px-font-family: "Rubik", Helvetica;
+  --rubik-12px-font-size: 12px;
+  --rubik-12px-font-style: normal;
+  --rubik-12px-font-weight: 600;
+  --rubik-12px-letter-spacing: 0px;
+  --rubik-12px-line-height: normal;
+  --rubik-16px-font-family: "Rubik", Helvetica;
+  --rubik-16px-font-size: 16px;
+  --rubik-16px-font-style: normal;
+  --rubik-16px-font-weight: 600;
+  --rubik-16px-letter-spacing: 0px;
+  --rubik-16px-line-height: normal;
+  --rubik-20px-font-family: "Rubik", Helvetica;
+  --rubik-20px-font-size: 20px;
+  --rubik-20px-font-style: normal;
+  --rubik-20px-font-weight: 600;
+  --rubik-20px-letter-spacing: 0px;
+  --rubik-20px-line-height: normal;
+  --rubik-24px-font-family: "Rubik", Helvetica;
+  --rubik-24px-font-size: 24px;
+  --rubik-24px-font-style: normal;
+  --rubik-24px-font-weight: 600;
+  --rubik-24px-letter-spacing: 0px;
+  --rubik-24px-line-height: normal;
+  --rubik-32px-font-family: "Rubik", Helvetica;
+  --rubik-32px-font-size: 32px;
+  --rubik-32px-font-style: normal;
+  --rubik-32px-font-weight: 600;
+  --rubik-32px-letter-spacing: 0px;
+  --rubik-32px-line-height: normal;
+  --white: rgba(255, 255, 255, 1);
+  --yellow-maybe: rgba(255, 165, 47, 1);
+}
+
+:root {
+  --animate-spin: spin 1s linear infinite;
+}
+
+.animate-fade-in {
+  animation: fade-in 1s var(--animation-delay, 0s) ease forwards;
+}
+
+.animate-fade-up {
+  animation: fade-up 1s var(--animation-delay, 0s) ease forwards;
+}
+
+.animate-marquee {
+  animation: marquee var(--duration) infinite linear;
+}
+
+.animate-marquee-vertical {
+  animation: marquee-vertical var(--duration) linear infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 8s infinite;
+}
+
+.animate-spin {
+  animation: var(--animate-spin);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes image-glow {
+  0% {
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.74, 0.25, 0.76, 1);
+  }
+
+  10% {
+    opacity: 0.7;
+    animation-timing-function: cubic-bezier(0.12, 0.01, 0.08, 0.99);
+  }
+
+  to {
+    opacity: 0.4;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes shimmer {
+  0%,
+  90%,
+  to {
+    background-position: calc(-100% - var(--shimmer-width)) 0;
+  }
+
+  30%,
+  60% {
+    background-position: calc(100% + var(--shimmer-width)) 0;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes marquee-vertical {
+  0% {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --card: transparent;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+
+    --card: transparent;
+    --card-foreground: 213 31% 91%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 216 34% 17%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
