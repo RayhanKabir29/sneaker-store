@@ -3,6 +3,7 @@
 import { Provider } from 'react-redux';
 import { ConfigProvider } from 'antd';
 import { store } from '../store/store';
+import { CartProvider } from '@/context/CartContext';
 
 
 export function Providers({ children }: { children: React.ReactNode }) {
@@ -20,7 +21,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
           },
         }}
       >
-        {children}
+        <CartProvider >{children}</CartProvider>
       </ConfigProvider>
     </Provider>
   );

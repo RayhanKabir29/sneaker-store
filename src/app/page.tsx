@@ -4,6 +4,7 @@ import Container from "@/components/layout/Container";
 import "./global.css";
 import { motion } from "framer-motion";
 import { Categories } from "@/components/home/Categories";
+import { Review } from "@/components/home/Review";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         className="min-h-screen w-full bg-gray-maybe"
       >
         <Categories/>
+        <Review />
       </motion.main>
     </Container>
   );
