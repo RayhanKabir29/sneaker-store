@@ -11,6 +11,8 @@ import {
 import Container from "@/components/layout/Container";
 import { useCart } from "@/context/CartContext";
 import { useState } from "react";
+import HeaderLogo from "@/assets/images/header-logo.png";
+import Image from "next/image";
 
 const Menu = () => {
   const [open, setOpen] = useState(false);
@@ -25,7 +27,7 @@ const Menu = () => {
 
   return (
     <Container>
-      <div className="bg-[#f4f3f1] rounded-2xl px-4 md:px-6 py-4 shadow-sm relative">
+      <div className="bg-[#FAFAFA] rounded-3xl px-4 md:p-8 shadow-sm relative mt-8">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-6">
             <div
@@ -39,7 +41,7 @@ const Menu = () => {
                 <motion.div
                   key={i}
                   whileHover={{ y: -2 }}
-                  className="flex items-center gap-1 text-sm font-medium text-gray-700 cursor-pointer"
+                  className="flex items-center gap-1 text-base font-semibold text-[#232321] cursor-pointer"
                 >
                   {item.label}
                   {item.dropdown && <DownOutlined className="text-xs" />}
@@ -47,16 +49,14 @@ const Menu = () => {
               ))}
             </div>
           </div>
-          <h1 className="absolute left-1/2 -translate-x-1/2 text-xl md:text-2xl font-extrabold tracking-wider">
-            KICKS
-          </h1>
+          <Image src={HeaderLogo} alt="Logo" width={128} height={32} className="object-contain" />
           <div className="flex items-center gap-4 md:gap-6">
             <div className="hidden sm:block cursor-pointer">
-              <SearchOutlined className="text-lg" />
+              <SearchOutlined size={28} />
             </div>
 
             <div className="cursor-pointer">
-              <UserOutlined className="text-lg" />
+              <UserOutlined size={28} />
             </div>
 
             <Badge size="small" showZero>
