@@ -1,8 +1,10 @@
+import Container from "@/components/layout/Container";
+
 const Header = () => {
     return (
-        <div>
+        <Container >
             <h2>This Is Header</h2>
-        </div>
+        </Container>
     );
 };
 

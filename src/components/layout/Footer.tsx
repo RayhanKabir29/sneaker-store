@@ -1,8 +1,9 @@
+import Container from "@/components/layout/Container";
 const Footer = () => {
     return (
-        <div>
+        <Container>
             <h2>This Is Footer</h2>
-        </div>
+        </Container>
     );
 };
 
