@@ -12,12 +12,10 @@ const Menu = () => {
     { label: "Men", dropdown: true },
     { label: "Women", dropdown: true },
   ];
-const {  getTotalItems } = useCart();
+  const { getTotalItems } = useCart();
   return (
     <Container>
-        <div className="w-full bg-[#e9e7e4] py-4">
-      <div className="max-w-[1400px] mx-auto bg-[#f4f3f1] rounded-2xl px-6 py-4 flex items-center justify-between shadow-sm">
-        
+      <div className=" bg-[#f4f3f1] rounded-2xl px-6 py-4 flex items-center justify-between shadow-sm">
         <div className="flex items-center gap-6">
           {menuItems.map((item, i) => (
             <motion.div
@@ -48,16 +46,14 @@ const {  getTotalItems } = useCart();
           </motion.div>
 
           <motion.div whileHover={{ scale: 1.1 }} className="cursor-pointer">
-            <Badge  size="small" showZero>
+            <Badge size="small" showZero>
               <Button className="w-6 h-6 rounded-full bg-orange-400 flex items-center justify-center text-xs font-bold text-white">
                 {getTotalItems()}
               </Button>
             </Badge>
           </motion.div>
         </div>
-
       </div>
-    </div>
     </Container>
   );
 };

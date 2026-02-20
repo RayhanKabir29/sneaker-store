@@ -26,7 +26,7 @@ const HeroSection = () => {
       variants={container}
       initial="hidden"
       animate="show"
-      className="flex flex-col items-center gap-6 px-4 py-6 w-full "
+      className="flex flex-col items-center gap-6  py-6 w-full "
     >
       <div className="flex justify-between items-center w-full">
         <motion.h1

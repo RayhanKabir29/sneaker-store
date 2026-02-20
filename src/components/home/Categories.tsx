@@ -39,7 +39,7 @@ export const Categories = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
-      className="w-full bg-[#232321] py-6 px-4"
+      className="w-full bg-[#232321] py-6"
     >
       <div className=" mx-auto">
         <div className="flex items-end justify-between mb-6">

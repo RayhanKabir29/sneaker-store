@@ -51,7 +51,7 @@ export const Review = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
-      className="w-full  px-4 py-12 flex flex-col gap-2"
+      className="w-full  py-12 flex flex-col gap-2"
     >
       <div className="flex items-center justify-between w-full">
         <motion.h2

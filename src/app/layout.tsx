@@ -28,7 +28,7 @@ export default function RootLayout({
       <body suppressHydrationWarning className={`${openSans.variable} ${rubik.variable} antialiased`}>
         <Providers>
           <LayoutWrapper>
-            <main> {children}</main>
+            <main > {children}</main>
           </LayoutWrapper>
         </Providers>
       </body>

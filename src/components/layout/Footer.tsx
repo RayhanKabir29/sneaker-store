@@ -41,7 +41,7 @@ const Footer = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="flex flex-col items-center px-4 py-10 w-full "
+        className="flex flex-col items-center py-10 w-full "
       >
         <motion.div variants={item} className="w-full">
           <Card className="bg-[#4a69e2] rounded-[28px] border-0 text-white px-12 py-12">
