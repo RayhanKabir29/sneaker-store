@@ -3,12 +3,15 @@
 import Container from "@/components/layout/Container";
 import { motion } from "framer-motion";
 import { Card, Button, Input, Space } from "antd";
+import FooterBannerLogo from "@/assets/images/footer-banner-logo.png";
+import Circle from "@/assets/images/circle.png";
 import {
   FacebookOutlined,
   TwitterOutlined,
   InstagramOutlined,
   YoutubeOutlined,
 } from "@ant-design/icons";
+import Image from "next/image";
 
 const container = {
   hidden: { opacity: 0, y: 50 },
@@ -42,19 +45,19 @@ const Footer = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="flex flex-col items-center py-10 w-full "
+        className="flex flex-col items-center pt-32 w-full "
       >
         <motion.div variants={item} className="w-full">
-          <Card className="bg-[#4a69e2] rounded-[28px] border-0 text-white px-12 py-12">
+          <Card className="bg-[#4A69E2] rounded-[48px] border-0 text-white ">
             <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
-              <div className="flex flex-col gap-2 max-w-lg">
-                <h2 className="text-3xl font-semibold leading-tight">
+              <div className="flex flex-col gap-2 pt-10 ps-12 w-1/2">
+                <h2 className="text-5xl font-semibold leading-[100%] text-[#fff] uppercase ">
                   Join our KicksPlus Club & get 15% off
                 </h2>
-                <p className="text-white/80">
+                <p className="text-[#E7E7E3] font-semibold text-xl mt-4 mb-8">
                   Sign up for free! Join the community.
                 </p>
-                <Space.Compact className="w-full md:w-[420px] mt-4">
+                <div className="w-full md:w-[420px] pb-20 flex">
                   <Input
                     placeholder="Email address"
                     size="large"
@@ -63,15 +66,24 @@ const Footer = () => {
                   <Button
                     type="default"
                     size="large"
-                    className="bg-[#232321] text-white border-0 px-6"
+                    className="bg-[#232321] text-[#fff] border-0 px-6 ml-2"
                   >
                     SUBMIT
                   </Button>
-                </Space.Compact>
+                </div>
               </div>
 
-              <div className="hidden md:flex flex-col items-end font-extrabold tracking-tight leading-none">
-                <span className="text-[64px]">KICKS</span>
+              <div className="relative mt-10 md:mt-0 w-1/2 flex items-center justify-center">
+                <Image
+                  src={Circle}
+                  alt="circle"
+                  className="absolute -top-5 right-28 w-6"
+                />
+                <Image
+                  src={FooterBannerLogo}
+                  alt="Footer Banner Logo"
+                  className="w-[320px] md:w-[400px]"
+                />
               </div>
             </div>
           </Card>
