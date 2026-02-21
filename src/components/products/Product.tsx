@@ -136,12 +136,32 @@ const ProductSection = () => {
             </div>
           </div>
           <div className="mt-8 space-y-3">
-            <button
-              className="w-full bg-[#232321] text-[#fff] py-2 px-4 h-12 rounded-[8px] font-medium text-sm cursor-pointer"
-               onClick={() => addToCart(product)}
-            >
-              ADD TO CART
-            </button>
+            <div className="flex gap-2">
+              <button
+                onClick={() => addToCart(product)}
+                className="flex-1 bg-[#232321] text-[#fff] h-12 rounded-[8px] font-medium text-sm"
+              >
+                ADD TO CART
+              </button>
+
+              
+              <button className="w-12 h-12 flex items-center justify-center bg-[#232321] text-[#fff] rounded-[8px]">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={2}
+                  stroke="currentColor"
+                  className="w-5 h-5"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M21 8.25c0-2.485-2.239-4.5-5-4.5-1.74 0-3.27.81-4 2.09-.73-1.28-2.26-2.09-4-2.09-2.761 0-5 2.015-5 4.5 0 7.22 9 11.25 9 11.25s9-4.03 9-11.25z"
+                  />
+                </svg>
+              </button>
+            </div>
 
             <button className="w-full bg-[#4A69E2] text-[#fff] py-2 px-4 h-12 rounded-[8px] font-medium text-sm">
               BUY IT NOW
