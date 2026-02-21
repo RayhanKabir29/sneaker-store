@@ -4,7 +4,7 @@ import notFound from "@/app/products/not-found";
 import { useCart } from "@/context/CartContext";
 import { useGetProductByIdQuery } from "@/store/api/productApi";
 import Image from "next/image";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { useState } from "react";
 
 const ProductSection = () => {
@@ -34,6 +34,12 @@ const ProductSection = () => {
       "rounded-br-[48px]",
     ];
     return map[index] ?? "";
+  };
+  const router = useRouter();
+
+  const handleBuyNow = () => {
+    addToCart(product);
+    router.push("/checkout");
   };
 
   return (
@@ -144,7 +150,6 @@ const ProductSection = () => {
                 ADD TO CART
               </button>
 
-              
               <button className="w-12 h-12 flex items-center justify-center bg-[#232321] text-[#fff] rounded-[8px]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -163,7 +168,10 @@ const ProductSection = () => {
               </button>
             </div>
 
-            <button className="w-full bg-[#4A69E2] text-[#fff] py-2 px-4 h-12 rounded-[8px] font-medium text-sm">
+            <button
+              onClick={handleBuyNow}
+              className="w-full bg-[#4A69E2] text-[#fff] py-2 px-4 h-12 rounded-[8px] font-medium text-sm"
+            >
               BUY IT NOW
             </button>
           </div>
