@@ -44,7 +44,7 @@ const ProductSection = () => {
 
   return (
     <div className="bg-[#f5f5f2] lg:bg-transparent py-6 lg:py-9">
-      <div className="max-w-7xl mx-auto lg:flex ">
+      <div className=" lg:flex ">
         <div className="flex-1 ">
           <div className="lg:hidden">
             <div className="relative bg-white rounded-2xl h-[380px]">
