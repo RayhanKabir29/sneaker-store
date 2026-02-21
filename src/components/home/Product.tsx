@@ -2,10 +2,10 @@
 
 import { motion } from "framer-motion";
 import { Button, Card, Row, Col } from "antd";
-
 import { useGetProductsQuery } from "@/store/api/productApi";
-import { useCart } from "@/context/CartContext";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+
 
 const item = {
   hidden: { y: 20, opacity: 0 },
@@ -17,7 +17,9 @@ const Product = () => {
     limit: 4,
     offset: 0,
   });
-  const { addToCart } = useCart();
+
+  const router = useRouter();
+
   return (
     <div className="mb:pt-[66px] pb-6 md:pb-32">
       <div className="flex items-center justify-between w-full mb-8">
@@ -76,7 +78,7 @@ const Product = () => {
                         {product.title}
                       </h3>
                       <Button
-                        onClick={() => addToCart(product)}
+                        onClick={() => router.push(`/products/${product.id}`)}
                         className="!bg-[#232321] !hover:bg-[#232321]/90  h-[44px] "
                       >
                         <span className="text-[#fff] font-medium text-xs md:text-sm">
