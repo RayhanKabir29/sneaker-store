@@ -77,7 +77,7 @@ export const Categories = () => {
                 <Card
                   hoverable
                   className=" overflow-hidden bg-[#f3f3f3] border-0 shadow-none"
-                  bodyStyle={{ padding: 0 }}
+                  styles={{ body: { padding: 0 } }}
                   cover={
                     <div className="relative h-[320px] flex flex-col justify-between p-6">
                       <div className="relative w-full h-[180px]">

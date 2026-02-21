@@ -54,9 +54,9 @@ const Product = () => {
                 >
                   <Card
                     hoverable
-                    bordered={false}
+                    variant="borderless"
                     className="w-full bg-transparent shadow-none"
-                    bodyStyle={{ padding: " 0 0" }}
+                     styles={{ body: { padding: 0 } }}
                     cover={
                       <>
                         <div className="bg-[#fff] p-2 rounded-[20px]">

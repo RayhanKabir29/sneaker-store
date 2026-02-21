@@ -75,7 +75,7 @@ export const Review = () => {
         {reviews.map((review) => (
           <motion.div key={review.id} variants={item}>
             <Card
-              bodyStyle={{ padding: 0 }}
+              styles={{ body: { padding: 0 } }}
               className="overflow-hidden rounded-[22px] bg-[#f4f4f4] border-0 shadow-none"
             >
               <div className="p-5 flex flex-col gap-3">
