@@ -2,7 +2,7 @@
 
 import Container from "@/components/layout/Container";
 import { motion } from "framer-motion";
-import { Card, Button, Input, Space } from "antd";
+import { Card, Button, Input } from "antd";
 import FooterBannerLogo from "@/assets/images/footer-banner-logo.png";
 import Circle from "@/assets/images/circle.png";
 import {
@@ -88,22 +88,21 @@ const Footer = () => {
             </div>
           </Card>
         </motion.div>
-
         <motion.div variants={item} className="w-full">
-          <Card className="relative overflow-hidden bg-[#232321] rounded-[26px]  text-white px-10 py-14 -mt-16">
-            <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
-              <section className="flex flex-col gap-3">
+          <Card className="relative overflow-hidden bg-[#232321] rounded-[48px] text-white px-12 pt-12 pb-56 -mt-20">
+            <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12">
+              <section className="flex flex-col gap-4 max-w-sm">
                 <h3 className="text-xl font-semibold text-[#ffa52f]">
                   About us
                 </h3>
-                <p className="text-gray-300 leading-relaxed">
+                <p className="text-sm text-[#E7E7E3] leading-relaxed">
                   We are the biggest hyperstore in the universe. We got you all
-                  covered with our exclusive collections and latest drops.
+                  cover with our exclusive collections and latest drops.
                 </p>
               </section>
 
-              <section className="flex flex-col gap-3">
-                <h4 className="text-lg font-semibold text-[#ffa52f]">
+              <section className="flex flex-col gap-4">
+                <h4 className="text-sm font-semibold uppercase tracking-wide text-[#ffa52f]">
                   Categories
                 </h4>
                 <nav className="flex flex-col gap-2">
@@ -111,17 +110,16 @@ const Footer = () => {
                     <motion.a
                       key={index}
                       href="#"
-                      className="text-gray-300 hover:text-[#ffa52f] transition-colors"
-                      whileHover={{ x: 5 }}
+                      className="text-sm text-[#E7E7E3] hover:text-[#ffa52f] transition-colors"
+                      whileHover={{ x: 6 }}
                     >
                       {category}
                     </motion.a>
                   ))}
                 </nav>
               </section>
-
-              <section className="flex flex-col gap-3">
-                <h4 className="text-lg font-semibold text-[#ffa52f]">
+              <section className="flex flex-col gap-4">
+                <h4 className="text-sm font-semibold uppercase tracking-wide text-[#ffa52f]">
                   Company
                 </h4>
                 <nav className="flex flex-col gap-2">
@@ -129,45 +127,42 @@ const Footer = () => {
                     <motion.a
                       key={index}
                       href="#"
-                      className="text-gray-300 hover:text-[#ffa52f] transition-colors"
-                      whileHover={{ x: 5 }}
+                      className="text-sm text-[#E7E7E3] hover:text-[#ffa52f] transition-colors"
+                      whileHover={{ x: 6 }}
                     >
                       {link}
                     </motion.a>
                   ))}
                 </nav>
               </section>
-
-              <section className="flex flex-col gap-3">
-                <h4 className="text-lg font-semibold text-[#ffa52f]">
+              <section className="flex flex-col gap-4">
+                <h4 className="text-sm font-semibold uppercase tracking-wide text-[#ffa52f]">
                   Follow us
                 </h4>
-                <Space size="middle">
+                <div className="flex gap-4">
                   {[
                     FacebookOutlined,
-                    TwitterOutlined,
                     InstagramOutlined,
+                    TwitterOutlined,
                     YoutubeOutlined,
                   ].map((Icon, i) => (
                     <motion.div
                       key={i}
-                      whileHover={{ scale: 1.2 }}
+                      whileHover={{ scale: 1.15 }}
                       whileTap={{ scale: 0.9 }}
-                      className="text-xl cursor-pointer text-gray-300 hover:text-[#ffa52f] transition-colors"
+                      className="text-lg text-[#E7E7E3] hover:text-[#ffa52f] cursor-pointer transition-colors"
                     >
                       <Icon />
                     </motion.div>
                   ))}
-                </Space>
+                </div>
               </section>
             </div>
-
-            <div className="absolute -bottom-40 left-1/2 -translate-x-1/2 text-[420px] font-black text-white/10 leading-none select-none pointer-events-none whitespace-nowrap">
+            <div className="absolute -bottom-48 left-1/2 -translate-x-1/2 text-[420px] font-extrabold text-[#fff] opacity-100 leading-none tracking-tight select-none pointer-events-none whitespace-nowrap">
               KICKS
             </div>
           </Card>
         </motion.div>
-
         <motion.p
           variants={item}
           className="w-full text-center text-[#232321] text-sm mt-6"
