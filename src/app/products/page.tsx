@@ -1,8 +1,12 @@
+
+import Container from "@/components/layout/Container";
+import ProductSection from "@/components/products/Product";
+
 const ProductPage = () => {
     return (
-        <div>
-            <h2>This Is Product Page</h2>
-        </div>
+        <Container>
+            <ProductSection />
+        </Container>
     );
 };
 
