@@ -26,26 +26,59 @@ A modern e-commerce storefront built with Next.js, showcasing sneakers and athle
 ## Project Structure
 
 ```
-src/
-├── app/                    # Next.js app directory
-│   ├── layout.tsx         # Root layout with providers
-│   ├── page.tsx           # Home page
-│   ├── providers.tsx      # Redux and Ant Design providers
-│   └── globals.css        # Global styles
-├── components/            # React components
-│   ├── sections/         # Page sections
-│   │   ├── HeaderSection.tsx
-│   │   ├── CategoriesSection.tsx
-│   │   ├── ProductsSection.tsx
-│   │   └── FooterSection.tsx
-│   └── ui/               # Reusable UI components
-├── context/              # React Context providers
-│   └── CartContext.tsx   # Shopping cart state
-├── store/               # Redux store configuration
-│   ├── store.ts         # Store setup
-│   └── api/
-│       └── productsApi.ts  # RTK Query API endpoints
-└── lib/                 # Utility functions
+SNEAKER-STORE/
+├── .next/
+├── node_modules/
+├── public/
+├── src/
+│   ├── app/
+│   │   ├── checkout/
+│   │   │   └── page.tsx
+│   │   ├── products/
+│   │   │   └── [id]/
+│   │   │       ├── loading.tsx
+│   │   │       ├── page.tsx
+│   │   │       └── not-found.tsx
+│   │   │
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   ├── page.tsx
+│   │   └── providers.tsx
+│   │
+│   ├── assets/
+│   │   └── images/
+│   │
+│   ├── components/
+│   │   ├── home/
+│   │   │   ├── Categories.tsx
+│   │   │   ├── Hero.tsx
+│   │   │   ├── Product.tsx
+│   │   │   └── Review.tsx
+│   │   │
+│   │   ├── layout/
+│   │   │   ├── Container.tsx
+│   │   │   ├── Footer.tsx
+│   │   │   ├── LayoutWrapper.tsx
+│   │   │   └── Menu.tsx
+│   │   │
+│   │   ├── products/
+│   │   │   ├── Product.tsx
+│   │   │   └── RecomondedProduct.tsx
+│   │   │
+│   │   └── checkout/
+│   │       └── Checkout.tsx
+│   │
+│   ├── context/
+│   │   └── CartContext.tsx
+│   │
+│   ├── lib/
+│   │
+│   └── store/
+│       ├── api/
+│       │   └── productApi.ts
+│       └── store.ts
+│
+              # Utility functions
 
 ```
 
