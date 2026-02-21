@@ -13,6 +13,7 @@ import { useCart } from "@/context/CartContext";
 import { useState } from "react";
 import HeaderLogo from "@/assets/images/header-logo.png";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const Menu = () => {
   const [open, setOpen] = useState(false);
@@ -24,7 +25,7 @@ const Menu = () => {
   ];
 
   const { getTotalItems } = useCart();
-
+  const router = useRouter();
   return (
     <Container>
       <div className="bg-[#FAFAFA] rounded-3xl px-4 md:p-8 shadow-sm relative mt-8">
@@ -49,7 +50,13 @@ const Menu = () => {
               ))}
             </div>
           </div>
-          <Image src={HeaderLogo} alt="Logo" width={128} height={32} className="object-contain" />
+          <Image
+            src={HeaderLogo}
+            alt="Logo"
+            width={128}
+            height={32}
+            className="object-contain"
+          />
           <div className="flex items-center gap-4 md:gap-6">
             <div className="hidden sm:block cursor-pointer">
               <SearchOutlined size={28} />
@@ -60,7 +67,10 @@ const Menu = () => {
             </div>
 
             <Badge size="small" showZero>
-              <Button className="w-6 h-6 rounded-full bg-orange-400 text-white font-bold p-0 flex items-center justify-center">
+              <Button
+                className="w-6 h-6 rounded-full bg-orange-400 text-white font-bold p-0 flex items-center justify-center"
+                onClick={() => router.push("/checkout")}
+              >
                 {getTotalItems()}
               </Button>
             </Badge>
