@@ -11,6 +11,7 @@ import { useGetCategoriesQuery } from "@/store/api/productApi";
 import { useRef } from "react";
 import { CarouselRef } from "antd/es/carousel";
 import Image from "next/image";
+import { useIsMdUp } from "@/lib/utils";
 
 const container = {
   hidden: { opacity: 0, y: 50 },
@@ -32,7 +33,7 @@ const item = {
 export const Categories = () => {
   const { data: categories, isLoading } = useGetCategoriesQuery();
   const carouselRef = useRef<CarouselRef>(null);
-
+const isMdUp = useIsMdUp();
   return (
     <motion.section
       variants={container}
@@ -42,7 +43,7 @@ export const Categories = () => {
       className="w-full bg-[#232321] "
     >
       <div className=" mx-auto">
-        <div className="flex items-end justify-between pb-16 pt-[90px]">
+        <div className="flex items-end justify-between md:pb-16 py-7 md:pt-[90px]">
           <motion.h2
             variants={item}
             className=" text-lg md:text-[74px] font-semibold text-[#fff] uppercase leading-[95%]"
@@ -69,11 +70,22 @@ export const Categories = () => {
         </div>
 
         {isLoading ? (
-          <h2 className="h-[348px] bg-gray-200 rounded-lg animate-pulse">Loading Categories........</h2>
+          <h2 className="h-[348px] bg-gray-200 rounded-lg animate-pulse">
+            Loading Categories........
+          </h2>
         ) : (
-          <Carousel ref={carouselRef} dots={false} slidesToShow={2}>
+          <Carousel
+            ref={carouselRef}
+            dots={false}
+            slidesToShow={isMdUp ? 2 : 1}
+            draggable
+          >
             {categories?.slice(0, 5).map((category, index) => (
-              <motion.div key={category.id} variants={item} className={`category-card ${index === 0 ? "first-card" : "other-card"}`}>
+              <motion.div
+                key={category.id}
+                variants={item}
+                className={`category-card ${index === 0 ? "first-card" : "other-card"}`}
+              >
                 <Card
                   hoverable
                   className=" overflow-hidden bg-[#fff] border-0 shadow-none"
