@@ -5,6 +5,9 @@ import { Card, Button, Rate, Avatar } from 'antd';
 import Review1 from '@/assets/images/reveiw-1.png'; 
 import Review2 from '@/assets/images/reveiw-2.png';
 import Review3 from '@/assets/images/reveiw-3.png';
+import Avatar1 from "../../assets/images/user-1.png"
+import Avatar2 from "../../assets/images/user-2.png"
+import Avatar3 from "../../assets/images/user-3.png"
 import Image from 'next/image';
 
 const container = {
@@ -26,21 +29,21 @@ const reviews = [
     title: "Good Quality",
     text: "I highly recommend shopping from kicks",
     img: Review1,
-    avatar: "../../assets/images/user-1.png",
+    avatar:Avatar1,
   },
   {
     id: 2,
     title: "Good Quality",
     text: "I highly recommend shopping from kicks",
     img: Review2,
-    avatar: "../../assets/images/user-2.png",
+    avatar:Avatar2,
   },
   {
     id: 3,
     title: "Good Quality",
     text: "I highly recommend shopping from kicks",
     img: Review3,
-    avatar: "../../assets/images/user-3.png",
+    avatar:Avatar3,
   },
 ];
 
@@ -51,12 +54,12 @@ export const Review = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
-      className="w-full  py-12 flex flex-col gap-2"
+      className="w-full   flex flex-col gap-2"
     >
-      <div className="flex items-center justify-between w-full">
+      <div className="flex items-center justify-between w-full pt-32 pb-12">
         <motion.h2
           variants={item}
-          className="text-4xl font-extrabold tracking-tight text-[#232321]"
+          className="text-[74px] font-semibold uppercase leading-[95%] text-[#232321]"
         >
           REVIEWS
         </motion.h2>
@@ -64,7 +67,7 @@ export const Review = () => {
         <motion.div variants={item}>
           <Button
             type="primary"
-            className="bg-[#4a69e2] border-0 px-6 h-10 rounded-lg font-semibold"
+            className="bg-[#4a69e2] border-0 px-8 py-2 h-10 rounded-[8px] font-semibold"
           >
             SEE ALL
           </Button>
@@ -82,15 +85,15 @@ export const Review = () => {
 
                 <div className="flex items-start justify-between">
                   <div>
-                    <h3 className="font-semibold text-lg text-[#232321]">
+                    <h3 className="font-semibold text-2xl text-[#232321]">
                       {review.title}
                     </h3>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-base text-[#232321]">
                       {review.text}
                     </p>
                   </div>
 
-                  <Avatar size={40} src={review.avatar} />
+                  <Avatar size={40} src={review.avatar.src} />
                 </div>
 
                 <div className="flex items-center gap-2">
