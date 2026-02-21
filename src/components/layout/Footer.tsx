@@ -48,16 +48,16 @@ const Footer = () => {
         className="flex flex-col items-center pt-32 w-full "
       >
         <motion.div variants={item} className="w-full">
-          <Card className="bg-[#4A69E2] rounded-[48px] border-0 text-white ">
-            <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
-              <div className="flex flex-col gap-2 pt-10 ps-12 w-1/2">
-                <h2 className="text-5xl font-semibold leading-[100%] text-[#fff] uppercase ">
+          <Card className="bg-[#4A69E2] rounded-3xl md:rounded-[48px] border-0 text-[#fff] ">
+            <div className="flex flex-col md:gap-8 md:flex-row md:items-center md:justify-between">
+              <div className="flex flex-col gap-2 md:pt-10 md:ps-12 md:w-1/2">
+                <h2 className="text-[27px] md:text-5xl font-semibold leading-8 md:leading-[100%] text-[#fff] uppercase ">
                   Join our KicksPlus Club & get 15% off
                 </h2>
                 <p className="text-[#E7E7E3] font-semibold text-xl mt-4 mb-8">
                   Sign up for free! Join the community.
                 </p>
-                <div className="w-full md:w-[420px] pb-20 flex">
+                <div className="w-full md:w-[420px] md:pb-20 flex">
                   <Input
                     placeholder="Email address"
                     size="large"
@@ -73,23 +73,23 @@ const Footer = () => {
                 </div>
               </div>
 
-              <div className="relative mt-10 md:mt-0 w-1/2 flex items-center justify-center">
+              <div className="relative mt-10 md:mt-0 md:w-1/2 flex md:items-center md:justify-center pb-10 md:pb-0">
                 <Image
                   src={Circle}
                   alt="circle"
-                  className="absolute -top-5 right-28 w-6"
+                  className="absolute -top-5 left-28 md:left-[480px] w-6"
                 />
                 <Image
                   src={FooterBannerLogo}
                   alt="Footer Banner Logo"
-                  className="w-[320px] md:w-[400px]"
+                  className="w-[120px] md:w-[400px]"
                 />
               </div>
             </div>
           </Card>
         </motion.div>
         <motion.div variants={item} className="w-full">
-          <Card className="relative overflow-hidden bg-[#232321] rounded-[48px] text-white px-12 pt-12 pb-56 -mt-20">
+          <Card className="relative overflow-hidden bg-[#232321] rounded-[24px] md:rounded-[48px] text-white md:px-12 mt:pt-12 pb-10 md:pb-56 -mt-12 md:-mt-20" >
             <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12">
               <section className="flex flex-col gap-4 max-w-sm">
                 <h3 className="text-xl font-semibold text-[#ffa52f]">
@@ -158,7 +158,7 @@ const Footer = () => {
                 </div>
               </section>
             </div>
-            <div className="absolute -bottom-48 left-1/2 -translate-x-1/2 text-[420px] font-extrabold text-[#fff] opacity-100 leading-none tracking-tight select-none pointer-events-none whitespace-nowrap">
+            <div className="absolute -bottom-14  md:-bottom-44 left-36  md:left-1/2 -translate-x-1/2 text-[130px] md:text-[420px] font-extrabold text-[#fff] opacity-100 leading-none tracking-tight select-none pointer-events-none whitespace-nowrap">
               KICKS
             </div>
           </Card>
