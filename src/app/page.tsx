@@ -1,7 +1,7 @@
 'use client';
 
 import Container from "@/components/layout/Container";
-import "./global.css";
+
 import { motion } from "framer-motion";
 import { Categories } from "@/components/home/Categories";
 import { Review } from "@/components/home/Review";

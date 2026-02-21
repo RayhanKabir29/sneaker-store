@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Open_Sans, Rubik } from "next/font/google";
 import LayoutWrapper from "@/components/layout/LayoutWrapper";
 import { Providers } from "@/app/providers";
+import "./global.css";
 const openSans = Open_Sans({
   subsets: ["latin"],
   variable: "--font-open-sans",
