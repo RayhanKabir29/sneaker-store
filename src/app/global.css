@@ -14,3 +14,16 @@
   background-color: #F6F6F6 !important;
 }
 
+.recommended-carousel .ant-carousel .slick-dots {
+    margin: -36px;
+}
+
+
+.recommended-carousel  .ant-carousel .slick-dots li button {
+   
+    background: #232321 !important;
+   
+}
+.recommended-carousel .ant-carousel .slick-dots li.slick-active::after {
+    background: #4A69E2 !important;
+}

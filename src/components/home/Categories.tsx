@@ -33,7 +33,7 @@ const item = {
 export const Categories = () => {
   const { data: categories, isLoading } = useGetCategoriesQuery();
   const carouselRef = useRef<CarouselRef>(null);
-const isMdUp = useIsMdUp();
+  const isMdUp = useIsMdUp();
   return (
     <motion.section
       variants={container}
