@@ -29,6 +29,10 @@ const HeroSection = () => {
       className="flex flex-col items-center gap-6 py-6 w-full"
     >
       <motion.div variants={item} className="w-full">
+        <h1 className="text-[72px] md:text-[223.5px] font-bold uppercase tracking-tight">
+          <span className="text-[#1f1f1f]">Do It </span>
+          <span className="text-[#4f6df5]">Right</span>
+        </h1>
         <Card className="relative w-full h-[750px] overflow-hidden rounded-[64px] mt-4 p-0">
           <div
             className="absolute inset-0 bg-cover bg-center"
@@ -61,9 +65,7 @@ const HeroSection = () => {
             </div>
           </div>
           <div className="absolute bottom-12 left-12 z-20 max-w-[490px] text-[#fff]">
-            <h2 className="text-[74px] font-semibold ">
-              NIKE AIR MAX
-            </h2>
+            <h2 className="text-[74px] font-semibold ">NIKE AIR MAX</h2>
 
             <p className="text-2xl text-[#E7E7E3]  font-semibold mb-6">
               Nike introducing the new air max for everyone's comfort
