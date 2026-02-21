@@ -45,7 +45,7 @@ export const Categories = () => {
         <div className="flex items-end justify-between pb-16 pt-[90px]">
           <motion.h2
             variants={item}
-            className="text-[74px] font-semibold text-[#fff] uppercase leading-[95%]"
+            className=" text-lg md:text-[74px] font-semibold text-[#fff] uppercase leading-[95%]"
           >
             Categories
           </motion.h2>

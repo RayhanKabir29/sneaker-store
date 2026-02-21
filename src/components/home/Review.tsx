@@ -59,7 +59,7 @@ export const Review = () => {
       <div className="flex items-center justify-between w-full pt-32 pb-12">
         <motion.h2
           variants={item}
-          className="text-[74px] font-semibold uppercase leading-[95%] text-[#232321]"
+          className="text-2xl md:text-[74px] font-semibold uppercase leading-[95%] text-[#232321]"
         >
           REVIEWS
         </motion.h2>
