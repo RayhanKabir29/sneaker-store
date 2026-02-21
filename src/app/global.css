@@ -7,9 +7,11 @@
 }
 .first-card .ant-card {
   border-radius: 64px 0 0 0 !important;
+  background-color: #ECEEF0 !important;
 }
 .other-card .ant-card {
   border-radius: 0 !important;
+  background-color: #F6F6F6 !important;
 }
 
 body{
