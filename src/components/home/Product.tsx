@@ -37,62 +37,62 @@ const Product = () => {
         </Button>
       </div>
       <Row gutter={[16, 16]} className="w-full">
-        {isLoading
-          ? Array.from({ length: 4 }).map((_, idx) => (
-              <Col key={idx} >
-                <h2 className="h-[348px] bg-gray-200 rounded-lg animate-pulse">
-                  Loading Product........
-                </h2>
-              </Col>
-            ))
-          : products?.slice(0, 4).map((product) => (
-              <Col key={product.id} xs={12} md={6} lg={6}>
-                <motion.div
-                  variants={item}
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <Card
-                    hoverable
-                    variant="borderless"
-                    className="w-full bg-transparent shadow-none"
-                     styles={{ body: { padding: 0 } }}
-                    cover={
-                      <>
-                        <div className="bg-[#fff] p-2 rounded-[20px]">
-                          <div className="relative bg-[#e7e6e4] rounded-[22px] h-[260px] flex items-center justify-center overflow-hidden">
-                            <Image
-                              src={product.images[0] || "/placeholder.png"}
-                              alt={product.title}
-                              fill
-                              className="object-contain p-8"
-                            />
+        {isLoading ? (
+          <Col>
+            <h2 className="h-[348px] bg-gray-200 rounded-lg animate-pulse text-center` text-gray-500 flex items-center justify-center">
+              Loading Product........
+            </h2>
+          </Col>
+        ) : (
+          products?.slice(0, 4).map((product) => (
+            <Col key={product.id} xs={12} md={6} lg={6}>
+              <motion.div
+                variants={item}
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <Card
+                  hoverable
+                  variant="borderless"
+                  className="w-full bg-transparent shadow-none"
+                  styles={{ body: { padding: 0 } }}
+                  cover={
+                    <>
+                      <div className="bg-[#fff] p-2 rounded-[20px]">
+                        <div className="relative bg-[#e7e6e4] rounded-[22px] h-[260px] flex items-center justify-center overflow-hidden">
+                          <Image
+                            src={product.images[0] || "/placeholder.png"}
+                            alt={product.title}
+                            fill
+                            className="object-contain p-8"
+                          />
 
-                            <div className="absolute top-0 left-0 bg-[#4a69e2] text-[#fff] text-xs font-semibold px-4 py-2 rounded-br-3xl">
-                              New
-                            </div>
+                          <div className="absolute top-0 left-0 bg-[#4a69e2] text-[#fff] text-xs font-semibold px-4 py-2 rounded-br-3xl">
+                            New
                           </div>
                         </div>
-                        <h3 className="font-semibold text-2xl mb-3 leading-snug line-clamp-2 min-h-[48px] text-[#232321] my-4">
-                          {product.title}
-                        </h3>
-                        <Button
-                          onClick={() => addToCart(product)}
-                          className="!bg-[#232321] !hover:bg-[#232321]/90  h-[44px] "
-                        >
-                          <span className="text-[#fff] font-medium text-sm">
-                            VIEW PRODUCT -
-                          </span>{" "}
-                          <span className="text-[#ffa52f] font-semibold ml-1">
-                            ${product.price}
-                          </span>
-                        </Button>
-                      </>
-                    }
-                  ></Card>
-                </motion.div>
-              </Col>
-            ))}
+                      </div>
+                      <h3 className="font-semibold text-2xl mb-3 leading-snug line-clamp-2 min-h-[48px] text-[#232321] my-4 truncate">
+                        {product.title}
+                      </h3>
+                      <Button
+                        onClick={() => addToCart(product)}
+                        className="!bg-[#232321] !hover:bg-[#232321]/90  h-[44px] "
+                      >
+                        <span className="text-[#fff] font-medium text-sm">
+                          VIEW PRODUCT -
+                        </span>{" "}
+                        <span className="text-[#ffa52f] font-semibold ml-1">
+                          ${product.price}
+                        </span>
+                      </Button>
+                    </>
+                  }
+                ></Card>
+              </motion.div>
+            </Col>
+          ))
+        )}
       </Row>
     </div>
   );

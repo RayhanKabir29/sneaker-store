@@ -39,13 +39,13 @@ export const Categories = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
-      className="w-full bg-[#232321] py-6"
+      className="w-full bg-[#232321] "
     >
       <div className=" mx-auto">
-        <div className="flex items-end justify-between mb-6">
+        <div className="flex items-end justify-between pb-16 pt-[90px]">
           <motion.h2
             variants={item}
-            className="text-2xl font-semibold text-slate-200"
+            className="text-[74px] font-semibold text-[#fff] uppercase leading-[95%]"
           >
             Categories
           </motion.h2>
@@ -72,11 +72,11 @@ export const Categories = () => {
           <h2 className="h-[348px] bg-gray-200 rounded-lg animate-pulse">Loading Categories........</h2>
         ) : (
           <Carousel ref={carouselRef} dots={false} slidesToShow={2}>
-            {categories?.slice(0, 5).map((category) => (
-              <motion.div key={category.id} variants={item}>
+            {categories?.slice(0, 5).map((category, index) => (
+              <motion.div key={category.id} variants={item} className={`category-card ${index === 0 ? "first-card" : "other-card"}`}>
                 <Card
                   hoverable
-                  className=" overflow-hidden bg-[#f3f3f3] border-0 shadow-none"
+                  className=" overflow-hidden bg-[#fff] border-0 shadow-none"
                   styles={{ body: { padding: 0 } }}
                   cover={
                     <div className="relative h-[320px] flex flex-col justify-between p-6">
@@ -88,8 +88,8 @@ export const Categories = () => {
                           className="object-contain"
                         />
                       </div>
-                      <div className="flex items-end justify-between">
-                        <h3 className="text-[18px] font-semibold text-[#1a1a1a] leading-tight">
+                      <div className="flex items-end justify-between max-w-[192px">
+                        <h3 className="text-4xl font-semibold text-[#232321] ">
                           {category.name}
                         </h3>
 
