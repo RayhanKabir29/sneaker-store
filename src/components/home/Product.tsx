@@ -19,11 +19,11 @@ const Product = () => {
   });
   const { addToCart } = useCart();
   return (
-    <div className="pt-[66px] py-32">
+    <div className="mb:pt-[66px] pb-6 md:pb-32">
       <div className="flex items-center justify-between w-full mb-8">
         <motion.h2
           variants={item}
-          className="text-2xl md:text-[74px] font-semibold text-[#232321] w-2/3 md:w-1/2 uppercase leading-[105%]"
+          className="text-2xl md:text-[74px] font-semibold text-[#232321] w-1/2 uppercase leading-[105%]"
         >
           Don&apos;t miss out new drops
         </motion.h2>
@@ -31,7 +31,7 @@ const Product = () => {
         <Button
           type="primary"
           size="large"
-          className="!bg-[#4a69e2] !border-none px-8 py-2 rounded-[8px] text-[#fff] uppercase font-medium tracking-wide text-sm md:mt-24"
+          className="!bg-[#4a69e2] !border-none px-4 md:px-8 py-2 rounded-[8px] text-[#fff] uppercase font-medium tracking-wide text-sm md:mt-24"
         >
           Shop New Drops
         </Button>
@@ -79,7 +79,7 @@ const Product = () => {
                         onClick={() => addToCart(product)}
                         className="!bg-[#232321] !hover:bg-[#232321]/90  h-[44px] "
                       >
-                        <span className="text-[#fff] font-medium text-sm">
+                        <span className="text-[#fff] font-medium text-xs md:text-sm">
                           VIEW PRODUCT -
                         </span>{" "}
                         <span className="text-[#ffa52f] font-semibold ml-1">
